@@ -1,7 +1,7 @@
 <?php
 require'conexao.php';
 ?>
-//kelver gay e viadon
+
 <!DOCTYPE html>
 <html>
 <head>
