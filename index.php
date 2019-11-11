@@ -35,10 +35,10 @@ require'conexao.php';
     </ul>
   </div>
 </nav>
-
+<div class="w-40">
 <center style="margin-top:2px; background-color: gray;">
 	<div>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img width="50" src="https://www.pitbulljeansvarejo.com.br/imagens/produtos/5565/Detalhes/camiseta-masculina-ref-m27673.jpg" class="d-block w-50" alt="">
@@ -60,6 +60,7 @@ require'conexao.php';
 </div>
 </div>
 </center>
+</div>
 
 
 
