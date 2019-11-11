@@ -113,8 +113,10 @@ require'conexao.php';
 
 
       <div class="col-md-12">
+        <label for="email">Imagem</label>
  <div class="input-group">
   <div class="input-group-prepend">
+
   </div>
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="inputGroupFile01"
