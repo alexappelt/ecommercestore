@@ -1,7 +1,7 @@
 <?php
 require'conexao.php';
 ?>
-
+//teste milena
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,7 @@ require'conexao.php';
     </ul>
   </div>
 </nav>
-<div class="w-40">
+<div class="w-40´">
 <center style="margin-top:2px; background-color: gray;">
 	<div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
