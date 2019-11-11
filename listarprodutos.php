@@ -67,23 +67,19 @@
 			$preco = $array['preco'];
 			$quantidade = $array['quantidade'];
 			$imagem = $array['imagem'];
+		echo '<tr>';
+		echo '<td>'.$codigo.'</td>';
+		echo '<td>'.$descricao.'</td>';
+		echo '<td>'.$marca.'</td>';
+		echo '<td>'.$departamento.'</td>';
+		echo '<td>'.$preco.'</td>';
+		echo '<td>'.$quantidade.'</td>';
+		echo '<td><img width="150" src="img/'.$imagem.'"></img></td>';
+    	echo '</tr>';
+    	}
 
     	 ?>
-<tr>
-    	<td> <?php echo $codigo  ?> </td>
-    	<td> <?php echo $descricao  ?> </td>
-    	<td> <?php echo $marca  ?> </td>
-    	<td> <?php echo $departamento  ?> </td>
-    	<td> <?php echo $preco  ?> </td>
-    	<td> <?php echo $quantidade  ?> </td>
-    	<td> <?php echo '<img width="150" src="img/'.$imagem.'"></img>' ?> </td>
-    	
 
-<?php 
-}
- ?>
-
-    </tr>
 
 </table>
 

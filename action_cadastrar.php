@@ -9,20 +9,13 @@ $quantidade = $_POST['quantidade'];
 $imagem = $_FILES['imagem'];
 $imagem_nome = $_FILES['imagem']['name'];
 
-$dir = dirname(__FILE__);
+
+$location = 'img/'; 
+move_uploaded_file($_FILES['imagem']['tmp_name'], $location.$imagem_nome);
 
 
 
-$temp_name = $_FILES['imagem']['tmp_name'];
-
-
-$path = $dir.'/img/'; 
-$location = $path . $_FILES['imagem']['name']; 
-move_uploaded_file($temp_name, $location);
-
-
-
-$sql = "insert into produto (descricao, marca, departamento, preco, quantidade, imagem) values ('$descricao', '$marca', '$departamento', '$preco', '$quantidade' ,'$imagem_nome')";
+$sql = "insert into produto (descricao, marca, departamento, preco, quantidade, imagem, img) values ('$descricao', '$marca', '$departamento', '$preco', '$quantidade' ,'$imagem_nome', 'teste')";
 
 
 $inserir = mysqli_query($conexao, $sql);
