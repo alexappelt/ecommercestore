@@ -1,6 +1,6 @@
 <?php
 require'conexao.php';
-//teste 3
+//teste
 ?>
 
 
