@@ -39,7 +39,6 @@ require'conexao.php';
 </nav>
 
 <button class="btn btn-info float-right"><a href="login.php">Cadastrar produtos</a></button>
-<button class="btn btn-warning float-rigt"><a href="listarprodutos.php">Lista de produtos</a></button>
 
 <table class="table table-striped">
   <thead class="thead-dark">
