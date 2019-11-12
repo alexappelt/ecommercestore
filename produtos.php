@@ -39,7 +39,7 @@ require'conexao.php';
 </nav>
 
 <button class="btn btn-info float-right"><a href="login.php">Cadastrar produtos</a></button>
-
+<div class="container">
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -86,7 +86,8 @@ require'conexao.php';
     </tr>
 
 </table>
-
+</div>
+</body>
 
 </body>
 </html>

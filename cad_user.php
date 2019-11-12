@@ -40,7 +40,7 @@ require'conexao.php';
 <h1 class="alert alert-success">Cadastro de Usuários</h1>
 
 
-<div class="container" style="background-color: gray; width: 500px; height: 350px; padding-top: 50px; border-radius: 15px; border-width: 10px;">
+<div class="container" style="background-color: gray; width: 500px; height: 350px; padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
   <form action="action_user.php" method="post" enctype="multipart/form-data" >
 
       <div class="col-md-6">

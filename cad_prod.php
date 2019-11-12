@@ -40,7 +40,7 @@ require'conexao.php';
 <h1 class="alert alert-success">Cadastro de produtos</h1>
 </center>
 
-<div class="container">
+<div class="container" style="background-color: gray; padding: 70px;  padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
 
   <form action="action_cadastrar.php" method="post" enctype="multipart/form-data" >
     <div class="row">
