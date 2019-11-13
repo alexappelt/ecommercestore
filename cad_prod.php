@@ -47,7 +47,7 @@ require'conexao.php';
       <div class="col-md-6">
         <div class="form-group">
           <label for="first">Codigo</label>
-          <input type="number" class="form-control" disabled="true" placeholder="" id="codigo" name="codigo">
+          <input type="number" class="form-control" disabled="true" placeholder="" id="codigo" name="codigo" >
         </div>
       </div>
       <!--  col-md-6   -->
@@ -55,7 +55,7 @@ require'conexao.php';
       <div class="col-md-6">
         <div class="form-group">
           <label for="last">Descrição</label>
-          <input type="text" class="form-control" placeholder="" id="descricao" name="descricao">
+          <input type="text" class="form-control" placeholder="" id="descricao" name="descricao" required="true">
         </div>
       </div>
       <!--  col-md-6   -->
@@ -66,7 +66,7 @@ require'conexao.php';
       <div class="col-md-6">
         <div class="form-group">
           <label for="company">Quantidade</label>
-          <input type="number" class="form-control" placeholder="" id="quantidade" name="quantidade" >
+          <input type="number" class="form-control" placeholder="" id="quantidade" name="quantidade" required="true" >
         </div>
 
 
@@ -75,7 +75,7 @@ require'conexao.php';
 
       <div class="col-md-6">
 <label for="email">Departamento</label>
-<select class="custom-select" id="departamento" name="departamento">
+<select class="custom-select" id="departamento" name="departamento" required="true">
     <option selected></option>
     <option value="Moda Praia">Moda Praia</option>
     <option value="Social">Social</option>
@@ -92,7 +92,7 @@ require'conexao.php';
 
         <div class="form-group">
           <label for="email">Preço</label>
-          <input type="number" class="form-control" id="preco" name="preco" >
+          <input type="number" class="form-control" id="preco" name="preco" required="true" >
         </div>
       </div>
       <!--  col-md-6   -->
@@ -102,7 +102,7 @@ require'conexao.php';
  
   <div class="col-md-6">
     <label for="email">Marca</label>
-<select class="custom-select" id="marca" name="marca">
+<select class="custom-select" id="marca" name="marca" required="true">
     <option selected></option>
     <option value="Lacoste">Lacoste</option>
     <option value="Adidas">Adidas</option>
@@ -132,7 +132,7 @@ require'conexao.php';
     
 <div class="float-right" style="margin-top: 30px;">
   <button type="submit" class="btn btn-dark border border-success">Cadastrar</button>
-  <button class="btn btn-dark border border-danger"><a href="index.php">Voltar</a></button>
+  <button class="btn btn-dark border border-danger"><a href="produtos.php">Voltar</a></button>
   </div>
   </form>
 

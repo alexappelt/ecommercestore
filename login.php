@@ -48,43 +48,34 @@ require'conexao.php';
 <!-- Formulario de login-->
 <center style="margin-top: 90px;">
 <div class="container" style="background-color: gray; width: 500px; height: 350px; padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
-	<form >
+	<form action="valid_login.php" method="post" enctype="multipart/form-data" >
   <div class="form-group w-50 ">
     <label for="exampleInputEmail1">Usuario</label>
-    <input type="text" class="form-control" id="user" aria-describedby="emailHelp" placeholder="Seu usuario" autocomplete="false">
+    <input type="text" class="form-control" id="user" name="user" aria-describedby="emailHelp" placeholder="Seu usuario" autocomplete="false">
   </div>
   <div class="form-group w-50">
     <label for="exampleInputPassword1">Senha</label>
-    <input type="password" class="form-control" id="password" placeholder="Senha" autocomplete="false">
+    <input type="password" class="form-control" id="password" name="pass" placeholder="Senha" autocomplete="false">
   </div>
   <div class="form-group form-check w-50">
     
   </div>
-  <button type="button" class="btn btn-primary" onclick="login()">Enviar</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
   <button class="btn btn-success"><a href="produtos.php">Voltar</a></button>
 </form>
-<h1  style="color:red;" id="alerta"></h1>
+<h1  style="color:red;" id="alerta" name="alerta"></h1>
 </div>
 </center>
 
-<script type="text/javascript">
-	
-	function login(){
-		var user, pass;
+<script>
+  function wrongpass(){
+    window.location.assign("login.php") ;
+    document.getElementById("alerta").innerHTML = "SENHA INVALIDA";
 
+  }
 
-		user = document.getElementById('user');
-		pass = document.getElementById('password');
-
-		if(user.value == "admin" && pass.value == "admin"){
-			window.location.href = "cad_prod.php";
-		}
-		else{
-			document.getElementById('alerta').innerHTML = 'Senha Invalida!';
-
-		}
-	}
 
 </script>
+
 </body>
 </html>

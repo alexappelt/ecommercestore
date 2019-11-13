@@ -26,7 +26,7 @@ require'conexao.php';
         <a class="nav-link" href="produtos.php">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"></a>
+        <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
