@@ -68,11 +68,7 @@ require'conexao.php';
 </center>
 
 <script>
-  function wrongpass(){
-    window.location.assign("login.php") ;
-    document.getElementById("alerta").innerHTML = "SENHA INVALIDA";
-
-  }
+  
 
 
 </script>

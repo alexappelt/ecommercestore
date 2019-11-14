@@ -72,10 +72,10 @@ require'conexao.php';
 <tr>
       <td> <?php echo $codigo  ?> </td>
       <td> <?php echo $descricao  ?> </td>
-      <td> <?php echo $marca  ?> </td>
+      <td> <?php echo $quantidade  ?> </td>
       <td> <?php echo $departamento  ?> </td>
       <td> <?php echo $preco  ?> </td>
-      <td> <?php echo $quantidade  ?> </td>
+      <td> <?php echo $marca  ?> </td>
       <td> <?php echo '<img width="150" src="img/'.$imagem.'"></img>' ?> </td>
       
 

@@ -69,12 +69,12 @@
 			$imagem = $array['imagem'];
 		echo '<tr>';
 		echo '<td>'.$codigo.'</td>';
-		echo '<td>'.$descricao.'</td>';
-		echo '<td>'.$marca.'</td>';
-		echo '<td>'.$departamento.'</td>';
-		echo '<td>'.$preco.'</td>';
-		echo '<td>'.$quantidade.'</td>';
-		echo '<td><img width="150" src="img/'.$imagem.'"></img></td>';
+		//echo '<td>'.$descricao.'</td>';
+   //echo '<td>'.$quantidade.'</td>';
+		//echo '<td>'.$departamento.'</td>';
+		//echo '<td>'.$preco.'</td>';
+		//echo '<td>'.$marca.'</td>';
+		//echo '<td><img width="150" src="img/'.$imagem.'"></img></td>';
     	echo '</tr>';
     	}
 
