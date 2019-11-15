@@ -24,11 +24,11 @@ require'conexao.php';
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="produtos.php">Produtos<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
+      <li class="nav-item active">
+        <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
@@ -92,7 +92,7 @@ require'conexao.php';
 
         <div class="form-group">
           <label for="email">Preço</label>
-          <input type="number" class="form-control" id="preco" name="preco" required="true" onkeyup="k(this);" >
+          <input type="number" step="0.01" class="form-control" id="preco" name="preco" required="true" onkeyup="k(this);" >
         </div>
       </div>
       <!--  col-md-6   -->
@@ -142,9 +142,6 @@ require'conexao.php';
   function k(i) {
   var v = i.value.replace(/\D/g,'');
   v = (v/100).toFixed(2) + '';
-  v = v.replace(".", ",");
-  v = v.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
-  v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");
   i.value = v;
 }
 

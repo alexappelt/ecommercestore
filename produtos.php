@@ -14,6 +14,7 @@ require'conexao.php';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="estilo.css">
+<script src="cart.js"></script>
 
 </head>
 <body>
@@ -39,7 +40,7 @@ require'conexao.php';
 </nav>
 
 <button class="btn btn-info float-right"><a href="login.php">Cadastrar produtos</a></button>
-<div class="container">
+<div class="">
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -50,6 +51,7 @@ require'conexao.php';
       <th scope="col">Preço</th>
       <th scope="col">Marca</th>
       <th scope="col">Foto</th>
+      <th scope="col"><img width="60" src="https://cdn4.iconfinder.com/data/icons/shopping-21/64/shopping-02-512.png"></th>
     </tr>
   </thead>
   
@@ -74,10 +76,17 @@ require'conexao.php';
       <td> <?php echo $descricao  ?> </td>
       <td> <?php echo $quantidade  ?> </td>
       <td> <?php echo $departamento  ?> </td>
-      <td> <?php echo $preco  ?> </td>
+      <td> <?php echo '<span style="color:#006400;">R$</span> '.$preco  ?> </td>
       <td> <?php echo $marca  ?> </td>
       <td> <?php echo '<img width="150" src="img/'.$imagem.'"></img>' ?> </td>
-      
+      <td>
+        <form action="cart.php?codigo=<?php echo $codigo.'&'.'preco='.$preco.'&'.'qntd='.$quantidade ?>" method="post" enctype="multipart/form-data">
+           
+        <label>Nrº Carrinho </label><input <?php echo 'id="'.$codigo.'"'?>   <?php echo 'name="cart'.$codigo ?><?php echo '"'?>  ><br>
+          <label>Quantidade </label><input <?php echo 'name="qntd'.$codigo ?><?php echo '"'?> type="" name="qntd"><br>
+          <button type="submit" class="btn btn-info">Adicionar</button>
+          </form>
+      </td>  
 
 <?php 
 }
@@ -85,8 +94,19 @@ require'conexao.php';
 
     </tr>
 
+<script>
+  
+
+
+</script>
+
+
+
 </table>
 </div>
+<form action="cart.php" method="post" enctype="multipart/form-data">
+<button type="submit" class="btn btn-info">Add</button>
+</form>
 </body>
 
 </body>
