@@ -32,14 +32,10 @@ require'conexao.php';
 
         <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-      </li>
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
-
       </li>
     </ul>
   </div>

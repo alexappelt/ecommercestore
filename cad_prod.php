@@ -25,20 +25,19 @@ require'conexao.php';
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="produtos.php">Produtos<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="produtos.php">Produtos</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
       <li class="nav-item">
-<<<<<<< HEAD
+
         <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-=======
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
->>>>>>> 58af7337b204757933baa56147ffa09f31a4f217
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
       </li>
     </ul>
   </div>
