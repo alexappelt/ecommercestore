@@ -29,17 +29,17 @@ require'conexao.php';
         <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
       <li class="nav-item">
-<<<<<<< HEAD
+
         <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"></a>
-=======
+      </li>
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
->>>>>>> 58af7337b204757933baa56147ffa09f31a4f217
+
       </li>
     </ul>
   </div>
