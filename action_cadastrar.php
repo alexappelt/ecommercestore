@@ -15,12 +15,13 @@ move_uploaded_file($_FILES['imagem']['tmp_name'], $location.$imagem_nome);
 
 
 
-$sql = "insert into carrinho (descricao, marca, departamento, preco, quantidade, imagem) values ('$descricao', '$marca', '$departamento', '$preco', '$quantidade' ,'$imagem_nome')";
+$sql = "insert into produto (descricao, marca, departamento, preco, quantidade, imagem) values ('$descricao', '$marca', '$departamento', '$preco', '$quantidade' ,'$imagem_nome')";
 
+echo $sql;
 
 $inserir = mysqli_query($conexao, $sql);
 
- header('Location: cad_prod.php');
+ //header('Location: cad_prod.php');
 
   ?>
 
