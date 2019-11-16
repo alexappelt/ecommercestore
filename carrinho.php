@@ -26,13 +26,13 @@ require'conexao.php';
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item  active">
+      <li class="nav-item">
         <a class="nav-link" href="produtos.php">Produtos<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item  active">
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
       </li>
     </ul>
@@ -44,50 +44,31 @@ require'conexao.php';
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Codigo</th>
-      <th scope="col">Descrição</th>
+      <th scope="col">Codigo do Carrinho</th>
+      <th scope="col">Codigo do Produto</th>
       <th scope="col">Quantidade</th>
-      <th scope="col">Departamento</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Foto</th>
-      <th scope="col"><img width="60" src="https://cdn4.iconfinder.com/data/icons/shopping-21/64/shopping-02-512.png"></th>
+      <th scope="col">Valor Total</th>
     </tr>
   </thead>
   
     
       <?php
     require'conexao.php';
-    $sql = "select * from produto";
+    $sql = "select * from carrinho";
     $busca = mysqli_query($conexao, $sql);
     
     while($array = mysqli_fetch_array($busca)){
-      $codigo = $array['codigo'];
-      $descricao = $array['descricao'];
-      $marca = $array['marca'];
-      $departamento = $array['departamento'];
-      $preco = $array['preco'];
+      $codigo_cart = $array['codigo'];
+      $codigo_prod = $array['codigo_prod'];
       $quantidade = $array['quantidade'];
-      $imagem = $array['imagem'];
+      $valor_total = $array['vl_total_itens'];
 
        ?>
 <tr>
-      <td> <?php echo $codigo  ?> </td>
-      <td> <?php echo $descricao  ?> </td>
+      <td> <?php echo $codigo_cart  ?> </td>
+      <td> <?php echo $codigo_prod  ?> </td>
       <td> <?php echo $quantidade  ?> </td>
-      <td> <?php echo $departamento  ?> </td>
-      <td> <?php echo '<span style="color:#006400;">R$</span> '.$preco  ?> </td>
-      <td> <?php echo $marca  ?> </td>
-      <td> <?php echo '<img width="150" src="img/'.$imagem.'"></img>' ?> </td>
-      <td>
-        <form action="cart.php?codigo=<?php echo $codigo.'&'.'preco='.$preco.'&'.'qntd='.$quantidade ?>" method="post" enctype="multipart/form-data">
-           
-        <label style="margin-right: 14px; margin-top: 5px;">Nrº Carrinho </label><input <?php echo 'id="'.$codigo.'"'?>   <?php echo 'name="cart'.$codigo ?><?php echo '"'?>  ><br>
-          <label style="margin-right: 18px; margin-top: 15px;;">Quantidade </label><input <?php echo 'name="qntd'.$codigo ?><?php echo '"'?> type="" name="qntd"><br>
-          <button type="submit" class="btn btn-info">Adicionar</button>
-          </form>
-      </td>  
-
+      <td> <?php echo $valor_total  ?> </td>
 <?php 
 }
  ?>
@@ -104,6 +85,7 @@ require'conexao.php';
 
 </table>
 </div>
+
 </body>
 
 </body>
