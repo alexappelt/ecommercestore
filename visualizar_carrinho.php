@@ -1,14 +1,12 @@
 <?php
 require'conexao.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ecommerce</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+	<title>Ecommerce</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
@@ -25,64 +23,49 @@ require'conexao.php';
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="produtos.php">Produtos<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="produtos.php">Produtos</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
       <li class="nav-item">
-<<<<<<< HEAD
-        <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-=======
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
->>>>>>> 58af7337b204757933baa56147ffa09f31a4f217
       </li>
     </ul>
   </div>
 </nav>
+
+
+  
 <center>
-<h1 class="alert alert-success">Cadastro de Usuários</h1>
-
-
-<div class="container" style="background-color: gray; width: 500px; height: 350px; padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
+<div class="container" style="margin-top: 250px; ">
   <form action="action_user.php" method="post" enctype="multipart/form-data" >
 
       <div class="col-md-6">
         <div class="form-group ">
-          <label for="company">Usuário</label>
+          <label for="company">Numero do carrinho</label>
           <input type="text" class="form-control" placeholder="" id="usuario" name="usuario" >
         </div>
       </div>
       <!--  col-md-12   -->
 
 
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="company">Senha</label>
-          <input type="password" class="form-control" placeholder="" id="senha" name="senha" >
-        </div>
-
-
-      </div>
-
-
-     
-<div class="float-right" style="margin-top: 30px;">
   <button type="submit" class="btn btn-dark border border-success">Cadastrar</button>
   <button class="btn btn-dark border border-danger"><a href="index.php">Voltar</a></button>
   </div>
   </form>
 
-</div>
 </center>
+  
+
+</div>
+
+
+
+
 
 
 
 </body>
 </html>
-
-
 
