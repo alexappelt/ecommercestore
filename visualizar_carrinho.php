@@ -34,7 +34,7 @@ require'conexao.php';
       </li>
         <a class="nav-link" href="carrinho.php">Carrinhos</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
       </li>
     </ul>
@@ -56,7 +56,7 @@ require'conexao.php';
       <!--  col-md-12   -->
 
 
-  <button type="submit" class="btn btn-dark border border-success">Cadastrar</button>
+  <button type="submit" class="btn btn-dark border border-success">Visualizar</button>
   <button class="btn btn-dark border border-danger"><a href="index.php">Voltar</a></button>
   </div>
   </form>
