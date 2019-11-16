@@ -21,7 +21,7 @@ echo $sql;
 
 $inserir = mysqli_query($conexao, $sql);
 
- //header('Location: cad_prod.php');
+ header('Location: cad_prod.php');
 
   ?>
 
