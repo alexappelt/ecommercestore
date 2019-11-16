@@ -27,10 +27,10 @@ require'conexao.php';
       <li class="nav-item">
         <a class="nav-link" href="produtos.php">Produtos<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
       </li>
       <li class="nav-item">
@@ -40,16 +40,16 @@ require'conexao.php';
   </div>
 </nav>
 <center>
-<h1 class="alert alert-success">Cadastro de Usuários</h1>
+<h1 class="alert alert-success">Cadastro de Clientes</h1>
 
 
-<div class="container" style="background-color: gray; width: 500px; height: 350px; padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
-  <form action="action_user.php" method="post" enctype="multipart/form-data" >
+<div class="container" style="background-color: gray; width: 500px; height: 550px; padding-top: 50px; border-top:solid black; border-radius: 15px; border-width: 10px;">
+  <form action="action_cad_cliente.php" method="post" enctype="multipart/form-data" >
 
       <div class="col-md-6">
         <div class="form-group ">
-          <label for="company">Usuário</label>
-          <input type="text" class="form-control" placeholder="" id="usuario" name="usuario" >
+          <label for="company">Nome</label>
+          <input type="text" class="form-control" autocomplete="false" placeholder="" id="Nome" name="nome" >
         </div>
       </div>
       <!--  col-md-12   -->
@@ -57,11 +57,30 @@ require'conexao.php';
 
       <div class="col-md-6">
         <div class="form-group">
-          <label for="company">Senha</label>
-          <input type="password" class="form-control" placeholder="" id="senha" name="senha" >
+          <label for="company">Sobrenome</label>
+          <input type="text" class="form-control" autocomplete="false" placeholder="" id="Sobrenome" name="sobrenome" >
         </div>
+      </div>
 
+       <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Email</label>
+          <input type="text" class="form-control" autocomplete="false" placeholder="" id="Email" name="email" >
+        </div>
+      </div>
 
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Usuario</label>
+          <input type="text" class="form-control" autocomplete="false" placeholder="" id="Usuario" name="usuario" >
+        </div>
+      </div>
+
+       <div class="col-md-6">
+        <div class="form-group">
+          <label for="company">Senha</label>
+          <input type="password" class="form-control" autocomplete="false" placeholder="" id="senha" name="senha" >
+        </div>
       </div>
 
 
