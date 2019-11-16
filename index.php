@@ -26,13 +26,13 @@ require'conexao.php';
         <a class="nav-link" href="produtos.php">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cad_user.php">Cadastro de Usuario</a>
+        <a class="nav-link" href="cad_user.php">Cadastro de Usuários</a>
       </li>
       <li class="nav-item">
 
         <a class="nav-link" href="cad_user_clientes.php">Cadastro de Clientes</a>
       </li>
-        <a class="nav-link" href="carrinho.php">Carrinhos</a>
+        <a class="nav-link" href="carrinho.php">Carrinho</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
