@@ -14,7 +14,6 @@ $location = 'img/';
 move_uploaded_file($_FILES['imagem']['tmp_name'], $location.$imagem_nome);
 
 
-
 $sql = "insert into produto (descricao, marca, departamento, preco, quantidade, imagem) values ('$descricao', '$marca', '$departamento', '$preco', '$quantidade' ,'$imagem_nome')";
 
 echo $sql;
