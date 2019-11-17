@@ -45,14 +45,16 @@ require'conexao.php';
   </div>
 </nav>
 
-<button class="btn btn-info float-right"><a href="login.php">Cadastrar produtos</a></button>
+
 <div class="">
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Codigo do Carrinho</th>
       <th scope="col">Codigo do Produto</th>
+      <th scope="col">Descrição do Produto</th>
       <th scope="col">Quantidade</th>
+      <th scope="col">Valor unitario</th>
       <th scope="col">Valor Total</th>
     </tr>
   </thead>
@@ -66,14 +68,18 @@ require'conexao.php';
     while($array = mysqli_fetch_array($busca)){
       $codigo_cart = $array['codigo'];
       $codigo_prod = $array['codigo_prod'];
+      $desc = $array['descricao'];
       $quantidade = $array['quantidade'];
+      $vl_unit = $array['vl_unitario'];
       $valor_total = $array['vl_total_itens'];
 
        ?>
 <tr>
       <td> <?php echo $codigo_cart  ?> </td>
       <td> <?php echo $codigo_prod  ?> </td>
+      <td> <?php echo $desc  ?> </td>
       <td> <?php echo $quantidade  ?> </td>
+      <td> <?php echo $vl_unit  ?> </td>
       <td> <?php echo $valor_total  ?> </td>
 <?php 
 }

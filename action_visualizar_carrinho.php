@@ -44,34 +44,54 @@ require'conexao.php';
 
   
 <center>
-<div class="container" style="margin-top: 250px; ">
-  <form action="action_visualizar_carrinho.php" method="post" enctype="multipart/form-data" >
-
-      <div class="col-md-6">
-        <div class="form-group ">
-          <label for="company"><h3>Numero do carrinho</h3></label>
-          <input type="text" class="form-control" placeholder="" id="usuario" name="v_carrinho" >
-        </div>
-      </div>
-      <!--  col-md-12   -->
-
-
-  <button type="submit" class="btn btn-dark border border-success">Visualizar</button>
-  <button class="btn btn-dark border border-danger"><a href="index.php">Voltar</a></button>
-  </div>
-  </form>
-
-</center>
+<div class="container" style="margin-top: 50px; ">
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Codigo do Carrinho</th>
+      <th scope="col">Codigo do Produto</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Quantidade</th>
+      <th scope="col">Valor Unitario</th>
+      <th scope="col">Valor Total</th>
+    </tr>
+  </thead>
   
+<?php
+    $cd_carrinho = $_POST['v_carrinho'];
+require'conexao.php';
+    $sql = "select * from carrinho where codigo = $cd_carrinho";
+    $busca = mysqli_query($conexao, $sql);
+    
+    while($array = mysqli_fetch_array($busca)){
+      $codigo_cart = $array['codigo'];
+      $codigo_prod = $array['codigo_prod'];
+      $desc = $array['descricao'];
+      $quantidade = $array['quantidade'];
+      $vl_unit = $array['vl_unitario'];
+      $valor_total = $array['vl_total_itens'];
 
+       ?>
+<tr>
+      <td> <?php echo $codigo_cart  ?> </td>
+      <td> <?php echo $codigo_prod  ?> </td>
+      <td> <?php echo $desc  ?> </td>
+      <td> <?php echo $quantidade  ?> </td>
+      <td> <?php echo $vl_unit  ?> </td>
+      <td> <?php echo $valor_total  ?> </td>
+<?php 
+}
+ ?>
+
+    </tr>
+</table>
 </div>
-
-
-
-
-
+<button class="btn btn-info"><a href="visualizar_carrinho.php"> Voltar </a> </button>
+<button class="btn btn-success">Finalizar carrinho</button>
+</center>
 
 
 </body>
+
 </html>
 

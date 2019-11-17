@@ -11,13 +11,22 @@ $name_qntd = 'qntd'.$codigo_prod;
 $quantidade = $_POST[$name_qntd];
 $carinho = $_POST[$name_carrinho];
 $valor_total = $quantidade*$preco;
-echo '  Carrinho: '.$carinho;
-echo '  Codigo do Produto: '.$codigo_prod;
-echo '  Preço do produto: '.$preco;
-echo '  Total: '.$valor_total;
 
-$sql = "insert into carrinho(codigo, codigo_prod, quantidade, vl_total_itens) VALUES ($carinho, $codigo_prod, $quantidade , $valor_total)";
+
+$buscadescprod = "select * from produto where codigo = $codigo_prod";
+
+$busca = mysqli_query($conexao, $buscadescprod);
+$array = mysqli_fetch_array($busca);
+
+$desc = $array['descricao'];
+
+
+
+$sql = "insert into carrinho(codigo, codigo_prod, quantidade, vl_total_itens, vl_unitario, descricao) VALUES ($carinho, $codigo_prod, $quantidade , $valor_total, $preco, '$desc')";
+
+
+
 $inserir = mysqli_query($conexao, $sql);
- header('Location: produtos.php');
+header('Location: produtos.php');
 
 ?>
