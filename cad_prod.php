@@ -53,7 +53,7 @@ require'conexao.php';
       <div class="col-md-6">
         <div class="form-group">
           <label for="first">Codigo</label>
-          <input type="number" class="form-control" disabled="true" placeholder="" id="codigo" name="codigo" >
+          <input type="number" class="form-control" disabled="true" placeholder="Geração Automatica" id="codigo" name="codigo" >
         </div>
       </div>
       <!--  col-md-6   -->

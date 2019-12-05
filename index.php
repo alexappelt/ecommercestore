@@ -37,6 +37,9 @@ require'conexao.php';
       <li class="nav-item">
         <a class="nav-link" href="visualizar_carrinho.php">Visualizar Carrinho</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cad_user.php">Cadastro Usuario</a>
+      </li>
     </ul>
   </div>
 </nav>
