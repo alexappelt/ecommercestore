@@ -62,7 +62,7 @@ require'conexao.php';
     
       <?php
     require'conexao.php';
-    $sql = "select * from carrinho";
+    $sql = "select * from carrinho order by codigo asc";
     $busca = mysqli_query($conexao, $sql);
     
     while($array = mysqli_fetch_array($busca)){

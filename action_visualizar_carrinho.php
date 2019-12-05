@@ -60,7 +60,7 @@ require'conexao.php';
 <?php
     $cd_carrinho = $_POST['v_carrinho'];
 require'conexao.php';
-    $sql = "select * from carrinho where codigo = $cd_carrinho";
+    $sql = "select  * from carrinho where codigo = $cd_carrinho";
     $busca = mysqli_query($conexao, $sql);
     
     while($array = mysqli_fetch_array($busca)){
@@ -73,23 +73,39 @@ require'conexao.php';
 
        ?>
 <tr>
-      <td> <?php echo $codigo_cart  ?> </td>
+      <td id="cd_cart"> <?php echo $codigo_cart  ?> </td>
       <td> <?php echo $codigo_prod  ?> </td>
       <td> <?php echo $desc  ?> </td>
       <td> <?php echo $quantidade  ?> </td>
       <td> <?php echo $vl_unit  ?> </td>
-      <td> <?php echo $valor_total  ?> </td>
+      <td class="tot"> <?php echo $valor_total  ?> </td>
 <?php 
 }
  ?>
 
-    </tr>
+
+
 </table>
+
 </div>
-<button class="btn btn-info"><a href="visualizar_carrinho.php"> Voltar </a> </button>
-<button class="btn btn-success">Finalizar carrinho</button>
+<button class="btn btn-info"><a href="visualizar_carrinho.php"  > Voltar </a> </button>
+<br>
+<form action="pagamento.php?codigo=<?php echo $codigo_cart ?>" method="post" enctype="multipart/form-data">
+<button type="submit" class="btn btn-success" style="margin-top: 10px;"> Finalizar carrinho </button>
+</form>
 </center>
 
+<script type="text/javascript">
+  
+  function total(){
+    var tot;
+tot = document.getElementByClass('tot').value;
+
+    alert(tot);
+}
+
+
+</script>
 
 </body>
 
