@@ -115,9 +115,11 @@ require'conexao.php';
     <option value="Lacoste">Lacoste</option>
     <option value="Adidas">Adidas</option>
     <option value="Gucci">Gucci</option>
-    <option value="Gucci">Pollo</option>
-    <option value="Gucci">Cavalera</option>
-    <option value="Gucci">Nike</option>
+    <option value="Pollo">Pollo</option>
+    <option value="Cavalera">Cavalera</option>
+    <option value="Nike">Nike</option>
+    <option value="Colcci">Colcci</option>
+    <option value="OaKley">Oakley</option>
 
   </select>
 
