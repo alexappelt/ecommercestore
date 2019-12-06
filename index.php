@@ -69,6 +69,64 @@ require'conexao.php';
 </div>
 </center>
 </div>
+<div class="">
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Descrição</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Departamento</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Foto</th>
+    </tr>
+  </thead>
+  
+    
+      <?php
+    require'conexao.php';
+    $sql = "select * from produto";
+    $busca = mysqli_query($conexao, $sql);
+    
+    while($array = mysqli_fetch_array($busca)){
+      $codigo = $array['codigo'];
+      $descricao = $array['descricao'];
+      $marca = $array['marca'];
+      $departamento = $array['departamento'];
+      $preco = $array['preco'];
+      $quantidade = $array['quantidade'];
+      $imagem = $array['imagem'];
+
+       ?>
+<tr>
+      <td> <?php echo $descricao  ?> </td>
+      <td> <?php echo $marca  ?> </td>
+      <td> <?php echo $departamento  ?> </td>
+      <td> <?php echo '<span style="color:#006400;">R$</span> '.$preco  ?> </td>
+      <td> <?php echo '<img width="150" src="img/'.$imagem.'"></img>' ?> </td>
+      <td>
+        <form action="cart.php?codigo=<?php echo $codigo.'&'.'preco='.$preco.'&'.'qntd='.$quantidade ?>" method="post" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-info">Adicionar</button>  
+        
+          </form>
+      </td>  
+
+<?php 
+}
+ ?>
+
+    </tr>
+
+<script>
+  
+
+
+</script>
+
+
+
+</table>
+</div>
+
 
 
 

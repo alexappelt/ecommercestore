@@ -23,6 +23,8 @@ $desc = $array['descricao'];
 
 
 $sql = "insert into carrinho(codigo, codigo_prod, quantidade, vl_total_itens, vl_unitario, descricao) VALUES ($carinho, $codigo_prod, $quantidade , $valor_total, $preco, '$desc')";
+
+
 $delete = "update produto set quantidade = (quantidade-$quantidade) where codigo = $codigo_prod";
 
 

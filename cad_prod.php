@@ -86,6 +86,8 @@ require'conexao.php';
     <option value="Moda Praia">Moda Praia</option>
     <option value="Social">Social</option>
     <option value="Esporte">Esporte</option>
+    
+
   </select>
       </div>
       <!--  col-md-6   -->
@@ -113,6 +115,10 @@ require'conexao.php';
     <option value="Lacoste">Lacoste</option>
     <option value="Adidas">Adidas</option>
     <option value="Gucci">Gucci</option>
+    <option value="Gucci">Pollo</option>
+    <option value="Gucci">Cavalera</option>
+    <option value="Gucci">Nike</option>
+
   </select>
 
 </div>
